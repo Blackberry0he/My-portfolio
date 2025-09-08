@@ -1,7 +1,7 @@
 const portfolioData = {
     developerName: "Your Name",
     socials: [
-        { label: "GitHub", href: "https://github.com/", icon: "🐙" },
+        { label: "GitHub", href: "https://github.com/", icon: "😺" },
         { label: "LinkedIn", href: "https://linkedin.com/in/", icon: "🔗" },
         { label: "Twitter", href: "https://twitter.com/", icon: "🐦" }
     ],
