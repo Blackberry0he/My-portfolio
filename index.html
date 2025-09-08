@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Frontend Developer Portfolio" />
+    <title>Frontend Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#home">&lt;FD /&gt;</a>
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <main id="home" class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Frontend Developer</p>
+            <h1>Hello, I'm <span class="accent" id="devName">Your Name</span></h1>
+            <p class="subtitle">I craft delightful, performant web experiences using modern JavaScript, React, and CSS.</p>
+            <div class="cta-row">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn ghost" href="#contact">Contact Me</a>
+            </div>
+            <div class="socials" id="socialLinks"></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="grid"></div>
+        </div>
+    </main>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About</h2>
+            <p id="aboutText">Passionate frontend developer focused on accessibility, design systems, and performance.
+            I love turning complex problems into simple, beautiful interfaces.</p>
+            <ul class="highlights" id="aboutHighlights"></ul>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="filters">
+                <button class="chip is-active" data-skill-filter="all">All</button>
+                <button class="chip" data-skill-filter="language">Languages</button>
+                <button class="chip" data-skill-filter="framework">Frameworks</button>
+                <button class="chip" data-skill-filter="tool">Tools</button>
+            </div>
+            <ul class="skill-list" id="skillList"></ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-head">
+                <h2>Projects</h2>
+                <div class="filters">
+                    <button class="chip is-active" data-project-filter="all">All</button>
+                    <button class="chip" data-project-filter="react">React</button>
+                    <button class="chip" data-project-filter="vanilla">Vanilla JS</button>
+                    <button class="chip" data-project-filter="design">Design Systems</button>
+                </div>
+            </div>
+            <div class="project-grid" id="projectGrid"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label>
+                        <span>Name</span>
+                        <input name="name" type="text" placeholder="Jane Doe" required />
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input name="email" type="email" placeholder="jane@example.com" required />
+                    </label>
+                </div>
+                <label>
+                    <span>Message</span>
+                    <textarea name="message" rows="5" placeholder="Let's build something great together" required></textarea>
+                </label>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Send Message</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> <span id="footerName">Your Name</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <dialog id="projectModal">
+        <article class="modal-card">
+            <button id="modalClose" class="icon-btn close" aria-label="Close">×</button>
+            <div id="modalContent"></div>
+        </article>
+    </dialog>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
